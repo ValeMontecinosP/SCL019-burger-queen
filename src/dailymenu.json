@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "text": "Hamburguesa simple",
+        "value": 5
+    },
+    {
+        "id": 2,
+        "text": "Hamburguesa doble",
+        "value": 5
+    },
+    {
+        "id": 3,
+        "text": "Papas fritas",
+        "value": 5
+    },
+    {
+        "id": 4,
+        "text": "Aros de cebolla",
+        "value": 5
+    },
+    {
+        "id": 5,
+        "text": "Agua 500ml",
+        "value": 5
+    },
+    {
+        "id": 6,
+        "text": "Agua 750ml",
+        "value": 5
+    },
+    {
+        "id": 7,
+        "text": "Bebida 500ml",
+        "value": 5
+    },
+    {
+        "id": 8,
+        "text": "Bebida 700ml",
+        "value": 5
+    }
+]

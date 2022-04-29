@@ -5,7 +5,7 @@ const Breakfast = () => {
     return (
         <>
             {breakfast.map((brekkie) => (
-                <Button text={`${brekkie.text} $${brekkie.value}`} />
+                <Button key={brekkie.id} text={`${brekkie.text} $${brekkie.value}`} />
             )
             )}
 
