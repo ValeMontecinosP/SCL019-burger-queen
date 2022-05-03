@@ -9,8 +9,12 @@ const Header = ({title}) => {
             <h5>Tiene un costo monetario de</h5>
             <h1>{title}</h1>
             <nav>
-                <Link to="/breakfast">Desayuno</Link>
-                <Link to="/dailymenu">Menú Diario</Link>
+                <Link to="/breakfast">
+                    <button> Desayuno </button>
+                </Link>
+                <Link to="/dailymenu">
+                <button> Menú Diario </button>
+                </Link>
             {/* <Button text="Desayuno"/> */}
             {/* <Button text="Menú diario"/> */}
             </nav>
