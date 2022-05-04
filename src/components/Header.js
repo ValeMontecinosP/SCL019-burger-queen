@@ -10,10 +10,10 @@ const Header = ({title}) => {
             <h1>{title}</h1>
             <nav>
                 <Link to="/breakfast">
-                    <button> Desayuno </button>
+                    <button className="mainButton"> Desayuno </button>
                 </Link>
                 <Link to="/dailymenu">
-                <button> Menú Diario </button>
+                <button className="mainButton"> Menú Diario </button>
                 </Link>
             {/* <Button text="Desayuno"/> */}
             {/* <Button text="Menú diario"/> */}

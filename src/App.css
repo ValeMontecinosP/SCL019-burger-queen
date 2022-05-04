@@ -1,16 +1,45 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Helvetica;
 }
 
 .Menu {
-  background: pink;
+  background: #867AE9;
+  color: #FFF5AB;
   text-align: center;
   margin: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
   padding: 10px;
   border-radius: 10px;
+}
+
+.mainButton {
+  background-color: #C449C2;
+  color: #FFF5AB;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.foodButton {
+  background-color: #C449C2;
+  font-weight: bold;
+  font-size: medium;
+  color: #FFF5AB;
   display: flex;
   flex-direction: column;
+  text-align: left;
+  padding: 5px;
+  border-radius: 5px;
 
+}
 
+.order {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-weight: bold;
+  margin-right: 50px;
 }
