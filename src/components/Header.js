@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Header = ({title}) => {
     return (
+    
         <header>
             <h5>Tiene un costo monetario de</h5>
             <h1>{title}</h1>
@@ -19,6 +20,7 @@ const Header = ({title}) => {
             {/* <Button text="Menú diario"/> */}
             </nav>
         </header>
+       
     )
 }
 Header.defaultProps = {
