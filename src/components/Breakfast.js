@@ -2,13 +2,36 @@ import breakfast from "../breakfast.json"
 import { Link } from "react-router-dom";
 import { fetchData } from "../firebase/firebase-functions";
 import { useState } from "react";
+import Cart from "./Cart.js";
 
-let order = [];
 
 const Breakfast = () => {
-    const [pedido, setPedido] = useState("");
-/*     const [price, setPrice] = useState(0); */
-    order.push(pedido);
+    const [cartItems, setCartItems] = useState([]);
+    const onAdd = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
+        if (exist) {
+            setCartItems(
+                cartItems.map((x) =>
+                    x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+                )
+            );
+        } else {
+            setCartItems([...cartItems, { ...product, qty: 1 }]);
+        }
+    };
+
+    const onRemove = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
+        if (exist.qty === 1) {
+            setCartItems(cartItems.filter((x) => x.id !== product.id));
+        } else {
+            setCartItems(
+                cartItems.map((x) =>
+                    x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+                )
+            );
+        }
+    };
 
     return (
         <>
@@ -18,30 +41,26 @@ const Breakfast = () => {
             </Link>
             {breakfast.map((brekkie) => (
                 <button className="foodButton" key={brekkie.id} onClick={() =>
-                    setPedido(brekkie)}>{brekkie.text} ${brekkie.value}</button>
+                    onAdd(brekkie)} >{brekkie.text} ${brekkie.value}</button>
             )
             )}
-            {order.map((text) => (
-                <p key={text.id}>{text.text} {text.value}</p>
-
-            ))}
-
-{/*             {order.map((total) => (
-                <button key={total.id}  onClick={() => setPrice(+total.value)}>
-                    {price}
-                </button>
-            ))} */}
-
 
 
 
             <button onClick={() => fetchData()}>click me</button>
+            <Cart
+                cartItems={cartItems}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            ></Cart>
+            {console.log(cartItems)}
 
         </>
 
     )
 }
 export default Breakfast
+
 
 
 //onClick as a prop
