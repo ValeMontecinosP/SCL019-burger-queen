@@ -1,14 +1,16 @@
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 
 /* import Button from "./Button" */
 
-const Header = ({title}) => {
+const Header = ({ title }) => {
     return (
-    
-        <header>
-        
+
+        <Container className="header">
+
+
             <h5>Tiene un costo monetario de</h5>
             <h1>{title}</h1>
             <nav>
@@ -16,13 +18,14 @@ const Header = ({title}) => {
                     <button className="mainButton"> Desayuno </button>
                 </Link>
                 <Link to="/dailymenu">
-                <button className="mainButton"> Menú Diario </button>
+                    <button className="mainButton"> Menú Diario </button>
                 </Link>
-            {/* <Button text="Desayuno"/> */}
-            {/* <Button text="Menú diario"/> */}
+                {/* <Button text="Desayuno"/> */}
+                {/* <Button text="Menú diario"/> */}
             </nav>
-        </header>
-       
+
+        </Container>
+
     )
 }
 Header.defaultProps = {

@@ -2,6 +2,9 @@ import { useState } from "react";
 import dailymenu from "../dailymenu.json"
 import { Link } from "react-router-dom";
 import Cart from "./Cart.js";
+import { ButtonGroup, Container, Row, Col } from "react-bootstrap";
+
+
 
 
 
@@ -38,11 +41,22 @@ const DailyMenu = () => {
             <Link to="/">
                 <button className="mainButton"> Volver a Home </button>
             </Link>
-            {dailymenu.map((menu) => (
-                <button className="foodButton" key={menu.id} onClick={() =>
-                    onAdd(menu)} >{menu.text} ${menu.value}</button>
-            )
-            )}
+            <Container>
+                <Row >
+                    <Col xs={12} >
+                        
+                            {dailymenu.map((menu) => (
+                                <ButtonGroup size = "lg" className="mb-2">
+
+                                <button className="foodButton"  key={menu.id} onClick={() =>
+                                    onAdd(menu)} >{menu.text} ${menu.value}</button>
+                                </ButtonGroup>
+                            )
+                            )}
+                        
+                    </Col>
+                </Row>
+            </Container>
 
 
 

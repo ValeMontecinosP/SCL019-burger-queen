@@ -6,7 +6,14 @@
   color: #FFF5AB;
 }
 
-
+.header {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
 .Menu {
   background: #867AE9;
@@ -23,7 +30,7 @@ button {
   background-color: #C449C2;
   color: #FFF5AB;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   font-weight: bold;
 
 }
@@ -31,22 +38,22 @@ button {
   background-color: #C449C2;
   color: #FFF5AB;
   border-radius: 10px;
-  padding: 5px;
+  padding: 15px;
   font-weight: bold;
 }
 
-.foodButton {
+/* .foodButton {
   background-color: #C449C2;
   font-weight: bold;
   font-size: medium;
   color: #FFF5AB;
   display: flex;
-  flex-direction: column;
+  
   text-align: left;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
 
-}
+} */
 
 .cart {
   display: flex;

@@ -1,34 +1,48 @@
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 const Cart = (props) => {
 
+
     const { cartItems, onAdd, onRemove } = props;
+    const finalPrice = cartItems.reduce((accumulator ,current)=> accumulator + current.value * current.qty, 0 );
+
 
     return (
-        <aside className="cart">
+        <Container>
             <h2>Pedido</h2>
+            <input id="inputName" type="text" placeholder="Nombre"></input>
+
             <div className="cart">
                 {cartItems.length === 0 && <div>Comanda está vacía</div>}
                 {cartItems.map((item) => (
-                    <div key={item.id} >
-                        <div >{item.text}</div>
-                        <div >
+                    <Row key={item.id} >
+                        <Col >{item.text}</Col>
+                        <Col >
                             <button onClick={() => onRemove(item)} className="modifyButton">
                                 -
                             </button>{' '}
                             <button onClick={() => onAdd(item)} className="modifyButton">
                                 +
                             </button>
-                        </div>
+                        </Col>
 
-                        <div >
+                        <Col >
                             {item.qty} x ${item.value}
 
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
+               
                 ))}
 
+                {cartItems.length!==0 && (
+                    <p>Total ${finalPrice}</p>
+                )}
 
 
-                    
+
+
                 <div className="row">
                     <button onClick={() => alert('Implement Checkout!')}>
                         Checkout
@@ -37,7 +51,7 @@ const Cart = (props) => {
 
 
             </div>
-        </aside>
+        </Container>
     );
 }
 

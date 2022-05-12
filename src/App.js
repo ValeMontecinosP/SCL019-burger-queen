@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./components/Header"
 import Breakfast from './components/Breakfast';
 import DailyMenu from './components/DailyMenu';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

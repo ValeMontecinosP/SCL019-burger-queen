@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import { fetchData } from "../firebase/firebase-functions";
 import { useState } from "react";
 import Cart from "./Cart.js";
+import { ButtonGroup, Container, Row, Col } from "react-bootstrap";
+
 
 
 const Breakfast = () => {
     const [cartItems, setCartItems] = useState([]);
+
+    
     const onAdd = (product) => {
         const exist = cartItems.find((x) => x.id === product.id);
         if (exist) {
@@ -39,16 +43,28 @@ const Breakfast = () => {
             <Link to="/">
                 <button className="mainButton"> Volver a Home </button>
             </Link>
-            {breakfast.map((brekkie) => (
-                <button className="foodButton" key={brekkie.id} onClick={() =>
-                    onAdd(brekkie)} >{brekkie.text} ${brekkie.value}</button>
-            )
-            )}
+            <Container>
+                <Row >
+                    <Col xs={12} >
+                        
+                            {breakfast.map((brekkie) => (
+                                <ButtonGroup size = "lg" className="mb-2">
+
+                                <button className="foodButton"  key={brekkie.id} onClick={() =>
+                                    onAdd(brekkie)} >{brekkie.text} ${brekkie.value}</button>
+                                </ButtonGroup>
+                            )
+                            )}
+                        
+                    </Col>
+                </Row>
+            </Container>
 
 
 
             <button onClick={() => fetchData()}>click me</button>
             <Cart
+            
                 cartItems={cartItems}
                 onAdd={onAdd}
                 onRemove={onRemove}
