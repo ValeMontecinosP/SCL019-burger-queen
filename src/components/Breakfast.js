@@ -50,7 +50,7 @@ const Breakfast = () => {
                             {breakfast.map((brekkie) => (
                                 <ButtonGroup size = "lg" className="mb-2">
 
-                                <button className="foodButton"  key={brekkie.id} onClick={() =>
+                                <button className="foodButton rounded-pill"  key={brekkie.id} onClick={() =>
                                     onAdd(brekkie)} >{brekkie.text} ${brekkie.value}</button>
                                 </ButtonGroup>
                             )
@@ -64,7 +64,6 @@ const Breakfast = () => {
 
             <button onClick={() => fetchData()}>click me</button>
             <Cart
-            
                 cartItems={cartItems}
                 onAdd={onAdd}
                 onRemove={onRemove}

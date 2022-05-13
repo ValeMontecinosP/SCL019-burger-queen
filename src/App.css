@@ -15,6 +15,10 @@
     transform: translate(-50%, -50%);
 }
 
+h3 {
+  font-weight:500;
+}
+
 .Menu {
   background: #867AE9;
   color: #FFF5AB;
@@ -29,11 +33,13 @@
 button {
   background-color: #C449C2;
   color: #FFF5AB;
-  border-radius: 10px;
   padding: 10px;
   font-weight: bold;
 
 }
+
+
+
 .mainButton {
   background-color: #C449C2;
   color: #FFF5AB;
@@ -42,18 +48,6 @@ button {
   font-weight: bold;
 }
 
-/* .foodButton {
-  background-color: #C449C2;
-  font-weight: bold;
-  font-size: medium;
-  color: #FFF5AB;
-  display: flex;
-  
-  text-align: left;
-  padding: 10px;
-  border-radius: 5px;
-
-} */
 
 .cart {
   display: flex;

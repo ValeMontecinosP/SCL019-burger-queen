@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import Cart from "./Cart.js";
 import { ButtonGroup, Container, Row, Col } from "react-bootstrap";
 
-
-
-
-
 const DailyMenu = () => {
     const [cartItems, setCartItems] = useState([]);
     const onAdd = (product) => {
@@ -39,21 +35,21 @@ const DailyMenu = () => {
     return (
         <>
             <Link to="/">
-                <button className="mainButton"> Volver a Home </button>
+                <button className="mainButton "> Volver a Home </button>
             </Link>
             <Container>
                 <Row >
                     <Col xs={12} >
-                        
-                            {dailymenu.map((menu) => (
-                                <ButtonGroup size = "lg" className="mb-2">
 
-                                <button className="foodButton"  key={menu.id} onClick={() =>
+                        {dailymenu.map((menu) => (
+                            <ButtonGroup size="lg" className="mb-2">
+
+                                <button className="foodButton rounded-pill" key={menu.id} onClick={() =>
                                     onAdd(menu)} >{menu.text} ${menu.value}</button>
-                                </ButtonGroup>
-                            )
-                            )}
-                        
+                            </ButtonGroup>
+                        )
+                        )}
+
                     </Col>
                 </Row>
             </Container>

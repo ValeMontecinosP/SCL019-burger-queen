@@ -44,30 +44,28 @@
         "text": "Papas fritas deliciosas",
         "value": 5
     },
-
     {
-        "id": 11,
+        "id": 10,
         "text": "Aros de cebolla",
         "value": 5
     },
-
     {
-        "id": 13,
+        "id": 11,
         "text": "Agua 500ml",
         "value": 5
     },
     {
-        "id": 14,
+        "id": 12,
         "text": "Agua 750ml",
         "value": 5
     },
     {
-        "id": 15,
+        "id": 13,
         "text": "Bebida 500ml",
         "value": 5
     },
     {
-        "id": 16,
+        "id": 14,
         "text": "Bebida 700ml",
         "value": 5
     }

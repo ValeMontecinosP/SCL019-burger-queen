@@ -12,7 +12,7 @@ const Header = ({ title }) => {
 
 
             <h5>Tiene un costo monetario de</h5>
-            <h1>{title}</h1>
+            <h1><strong>{title}</strong></h1>
             <nav>
                 <Link to="/breakfast">
                     <button className="mainButton"> Desayuno </button>
