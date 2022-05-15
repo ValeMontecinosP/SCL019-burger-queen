@@ -13,12 +13,13 @@ export const fetchData = async () => {
 };
 
 export const addOrder = async (cartItems) => {
+    let user = document.getElementById("inputName");
+    let userName = user.value;
     const docRef = await addDoc(collection(db, "orders"), {
+        userName,
         cartItems,
         date: Timestamp.fromDate(new Date()),
 
     });
-    
-
-    return console.log("Document written with ID: ", docRef.id)
+ console.log("Document written with ID: ", docRef.id)
 }
