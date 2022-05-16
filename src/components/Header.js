@@ -20,6 +20,10 @@ const Header = ({ title }) => {
                 <Link to="/dailymenu">
                     <button className="mainButton"> Menú Diario </button>
                 </Link>
+                <Link to="/kitchen">
+                    <button className="mainButton"> Cocina </button>
+                </Link>
+
                 {/* <Button text="Desayuno"/> */}
                 {/* <Button text="Menú diario"/> */}
             </nav>

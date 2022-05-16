@@ -1,14 +1,16 @@
 import { db } from "./firebase-config";
-import { collection, getDocs, addDoc, Timestamp} from "firebase/firestore";
+import { collection, getDocs, addDoc, query, orderBy, Timestamp} from "firebase/firestore";
 
 
 export const fetchData = async () => {
-    const order = await getDocs(collection(db, "orders"));
+    const allOrders = query(collection(db, "orders"), orderBy("datepost", "desc"));
+
+    const order = await getDocs(allOrders);
     order.forEach((doc) => {
-        console.log(doc.data())
+        console.log(allOrders)
     })
 
-    return order.docs[0].data();
+   
     // console.log(querySnapshot)
 };
 
