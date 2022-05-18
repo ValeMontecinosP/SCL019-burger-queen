@@ -35,10 +35,10 @@ const DailyMenu = () => {
     return (
         <>
             <Link to="/">
-                <button className="mainButton "> Volver a Home </button>
+                <button className="mainButton"> Volver a Home </button>
             </Link>
             <Container>
-                <Row >
+                <Row>
                     <Col xs={12} >
 
                         {dailymenu.map((menu) => (
@@ -62,6 +62,8 @@ const DailyMenu = () => {
                 onAdd={onAdd}
                 onRemove={onRemove}
             ></Cart>
+            <button className="mainButton" onClick={() => window.location.reload(false)}>Nuevo Pedido</button>
+
         </>
 
     )

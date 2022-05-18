@@ -3,15 +3,13 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { addOrder } from '../firebase/firebase-functions'
 
+
 const Cart = (props) => {
 
 
     const { cartItems, onAdd, onRemove } = props;
     const finalPrice = cartItems.reduce((accumulator, current) => accumulator + current.value * current.qty, 0);
     const userName = <input id="inputName" type="text" className='text-center' placeholder="Nombre"></input>
-
-
-   
 
     return (
         <Container>
@@ -47,6 +45,9 @@ const Cart = (props) => {
                     <button className="text-center rounded-pill" onClick={() => addOrder(cartItems)}>
                         Checkout
                     </button>
+                    
+                
+
                 </div>
 
 

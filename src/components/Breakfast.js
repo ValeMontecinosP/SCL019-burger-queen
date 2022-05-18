@@ -1,6 +1,5 @@
 import breakfast from "../breakfast.json"
 import { Link } from "react-router-dom";
-import { fetchData } from "../firebase/firebase-functions";
 import { useState } from "react";
 import Cart from "./Cart.js";
 import { ButtonGroup, Container, Row, Col } from "react-bootstrap";
@@ -10,7 +9,7 @@ import { ButtonGroup, Container, Row, Col } from "react-bootstrap";
 const Breakfast = () => {
     const [cartItems, setCartItems] = useState([]);
 
-    
+
     const onAdd = (product) => {
         const exist = cartItems.find((x) => x.id === product.id);
         if (exist) {
@@ -46,28 +45,28 @@ const Breakfast = () => {
             <Container>
                 <Row >
                     <Col xs={12} >
-                        
-                            {breakfast.map((brekkie) => (
-                                <ButtonGroup size = "lg" className="mb-2">
 
-                                <button className="foodButton rounded-pill"  key={brekkie.id} onClick={() =>
+                        {breakfast.map((brekkie) => (
+                            <ButtonGroup size="lg" className="mb-2">
+
+                                <button className="foodButton rounded-pill" key={brekkie.id} onClick={() =>
                                     onAdd(brekkie)} >{brekkie.text} ${brekkie.value}</button>
-                                </ButtonGroup>
-                            )
-                            )}
-                        
+                            </ButtonGroup>
+                        )
+                        )}
+
                     </Col>
                 </Row>
             </Container>
 
-
-
-            <button onClick={() => fetchData()}>click me</button>
             <Cart
                 cartItems={cartItems}
                 onAdd={onAdd}
                 onRemove={onRemove}
             ></Cart>
+
+            <button className="mainButton" onClick={() => window.location.reload(false)}>Nuevo Pedido</button>
+
             {console.log(cartItems)}
 
         </>
