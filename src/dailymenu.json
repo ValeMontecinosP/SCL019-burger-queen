@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "text": "Hamburguesa simple res",
+        "value": 5
+    },
+    {
+        "id": 2,
+        "text": "Hamburguesa simple pollo",
+        "value": 5
+    },
+    {
+        "id": 3,
+        "text": "Hamburguesa simple veg",
+        "value": 5
+    },
+    {
+        "id": 4,
+        "text": "Hamburguesa doble res",
+        "value": 5
+    },
+    {
+        "id": 5,
+        "text": "Hamburguesa doble pollo",
+        "value": 5
+    },
+    {
+        "id": 6,
+        "text": "Hamburguesa doble veg",
+        "value": 5
+    },
+    {
+        "id": 7,
+        "text": "Extra queso",
+        "value": 5
+    },
+    {
+        "id": 8,
+        "text": "Extra huevo",
+        "value": 5
+    },
+    {
+        "id": 9,
+        "text": "Papas fritas deliciosas",
+        "value": 5
+    },
+    {
+        "id": 10,
+        "text": "Aros de cebolla",
+        "value": 5
+    },
+    {
+        "id": 11,
+        "text": "Agua 500ml",
+        "value": 5
+    },
+    {
+        "id": 12,
+        "text": "Agua 750ml",
+        "value": 5
+    },
+    {
+        "id": 13,
+        "text": "Bebida 500ml",
+        "value": 5
+    },
+    {
+        "id": 14,
+        "text": "Bebida 700ml",
+        "value": 5
+    }
+]

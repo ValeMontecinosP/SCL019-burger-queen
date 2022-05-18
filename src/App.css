@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  background: #867AE9;
+  color: #FFF5AB;
+  background-size: cover;
+}
+
+Container {
+  background: #867AE9;
+
+}
+
+.header {
+
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #867AE9;
+
+}
+
+.card-img-top {
+  max-width: 90%;
+
+}
+
+h3 {
+  font-weight: 500;
+  background: #867AE9;
+}
+
+.Menu {
+  background: #867AE9;
+  color: #FFF5AB;
+  text-align: center;
+  margin: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #C449C2;
+  color: #FFF5AB;
+  padding: 10px;
+  font-weight: bold;
+
+}
+
+
+
+.mainButton {
+  background-color: #C449C2;
+  color: #FFF5AB;
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: bold;
+}
+
+
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: right;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+::placeholder{
+  color: #ffffffd6;
+}
