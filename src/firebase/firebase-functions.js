@@ -1,5 +1,5 @@
 import { db } from "./firebase-config";
-import { collection, getDocs, addDoc, query, orderBy, Timestamp} from "firebase/firestore";
+import { collection, getDocs, addDoc, query, orderBy, Timestamp } from "firebase/firestore";
 
 
 /* export const fetchData = async () => {
@@ -9,23 +9,29 @@ import { collection, getDocs, addDoc, query, orderBy, Timestamp} from "firebase/
     const order = await getDocs(allOrders);
 
     console.log (order)
-    /*order.forEach((doc) => {
-        console.log(doc.data())
-        return doc
-    }) */
-
-    
-   
-    // console.log(querySnapshot)
-// };
-
-export const fetchData = async () => {
-    const order = await getDocs(collection(db, "orders"), orderBy("datepost", "desc"));
     order.forEach((doc) => {
         console.log(doc.data())
+        return doc
     })
 
-    return order.docs[0].data();
+
+
+console.log(querySnapshot)
+}; */
+
+export const fetchOrders = async () => {
+    const allOrders = query(collection(db, "orders"), orderBy("datepost", "desc"));
+
+    const order = await getDocs(allOrders);
+    /* const arrayOrders = []; */
+  /*   order.forEach((doc) => {
+        arrayOrders.push(doc.data())
+        //console.log(doc.data())
+    }) */
+    //console.log(order.docs.data())
+    //console.log(arrayOrders)
+
+    return order;
     // console.log(querySnapshot)
 };
 
@@ -38,5 +44,8 @@ export const addOrder = async (cartItems) => {
         date: Timestamp.fromDate(new Date()),
 
     });
- console.log("Document written with ID: ", docRef.id)
+
+    alert("El pedido fue ingresado")
+
+    console.log("Document written with ID: ", docRef.id)
 }
